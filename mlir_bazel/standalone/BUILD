@@ -62,3 +62,15 @@ cc_binary(
         "@llvm-project//mlir:Support",
     ],
 )
+
+cc_binary(
+    name = "standalone-translate",
+    srcs = ["standalone_translate.cc"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":standalone_mlir",
+        "@llvm-project//mlir:AllTranslations",
+        "@llvm-project//mlir:Support",
+        "@llvm-project//mlir:Translation",
+    ],
+)

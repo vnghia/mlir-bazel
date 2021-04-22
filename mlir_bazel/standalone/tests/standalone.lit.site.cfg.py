@@ -22,7 +22,7 @@ config.mlir_test_dir = os.path.join(
     real_test_srcdir, os.environ["TEST_WORKSPACE"], test_dir
 )
 
-config.mlir_tool_names = ["standalone-opt"]
+config.mlir_tool_names = ["standalone-opt", "standalone-translate"]
 
 lit.llvm.initialize(lit_config, config)
 

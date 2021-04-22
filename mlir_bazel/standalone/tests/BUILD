@@ -16,11 +16,13 @@ gen_lit_test(
     data = [
         ":standalone_litcfg",
         "//mlir_bazel/standalone:standalone-opt",
+        "//mlir_bazel/standalone:standalone-translate",
     ],
     litprefix = "standalone.lit",
     mlirfiles = [
         "standalone.foo.mlir",
         "standalone-opt.mlir",
+        "standalone-translate.mlir",
     ],
     root_test_dir = "mlir_bazel/standalone/tests/",
 )
