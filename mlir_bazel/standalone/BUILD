@@ -51,8 +51,9 @@ cc_library(
 )
 
 cc_binary(
-    name = "standalone_opt",
+    name = "standalone-opt",
     srcs = ["standalone_opt.cc"],
+    visibility = ["//visibility:public"],
     deps = [
         ":standalone_mlir",
         "@llvm-project//llvm:Support",

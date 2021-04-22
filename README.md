@@ -12,4 +12,5 @@ Based on [llvm-standalone](https://github.com/llvm/llvm-project/tree/main/mlir/e
 
 ```bash
 bazel build //mlir_bazel/standalone:standalone_opt --config=generic_clang
+bazel test //mlir_bazel/standalone/tests:all --config=generic_clang
 ```
