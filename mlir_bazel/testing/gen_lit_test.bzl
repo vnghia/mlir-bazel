@@ -6,6 +6,7 @@ load("@bazel_skylib//lib:paths.bzl", "paths")
 
 def gen_lit_test(name = "", root_test_dir = "", mlirfiles = [], litprefix = "lit", data = []):
     for i, mlirfile in enumerate(mlirfiles):
+        mlirfile = mlirfile.strip("/")
         native.py_test(
             name = mlirfile.replace(".", "_").replace("-", "_"),
             srcs = ["@llvm-project//llvm:lit"],
